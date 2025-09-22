@@ -21,9 +21,10 @@ local a a={cache={}, load=function(b)if not a.cache[b]then a.cache[b]={c=a[b]()}
 
 
 
-cloneref and cloneref(game:GetService"RunService")or game:GetService"RunService"
-local c=cloneref and cloneref(game:GetService"UserInputService")or game:GetService"UserInputService"
-local d=cloneref and cloneref(game:GetService"TweenService")or game:GetService"TweenService"
+local aee = game:GetService("RunService")
+local cee = game:GetService("UserInputService")
+local dee = game:GetService("TweenService")
+
 
 local e=loadstring(game:HttpGetAsync"https://raw.githubusercontent.com/Footagesus/Icons/main/Main.lua")()
 e.SetIconsType"lucide"
@@ -1703,7 +1704,6 @@ end
 return c end function a.j()
 local c={}
 
-local d=cloneref and cloneref(game:GetService"UserInputService")or game:GetService"UserInputService"
 
 local e=a.load'a'
 local f=e.New local g=
@@ -1875,7 +1875,6 @@ end
 
 return c end function a.k()
 
-local c=cloneref and cloneref(game:GetService"HttpService")or game:GetService"HttpService"
 
 local d
 d={
@@ -2054,7 +2053,6 @@ local d=a.load'a'
 local e=d.New
 local f=d.Tween
 
-local g=cloneref and cloneref(game:GetService"UserInputService")or game:GetService"UserInputService"
 
 function c.New(h)
 local i={
@@ -2433,7 +2431,7 @@ local d=c.New
 local e=c.NewRoundFrame
 local f=c.Tween local g=
 
-cloneref and cloneref(game:GetService"UserInputService")or game:GetService"UserInputService"
+
 
 
 return function(h)
@@ -3026,8 +3024,6 @@ local g={}
 
 local h=false
 
-local i=cloneref and cloneref(game:GetService"RunService")or game:GetService"RunService"
-local j=cloneref and cloneref(game:GetService"UserInputService")or game:GetService"UserInputService"
 
 function g.New(k,l)
 local m={
@@ -3210,7 +3206,6 @@ return m.__type,m
 end
 
 return g end function a.t()
-local c=cloneref and cloneref(game:GetService"UserInputService")or game:GetService"UserInputService"
 
 local e=a.load'a'
 local f=e.New local g=
@@ -3417,9 +3412,7 @@ return l.__type,l
 end
 
 return g end function a.v()
-local c=cloneref and cloneref(game:GetService"UserInputService")or game:GetService"UserInputService"
-local e=cloneref and cloneref(game:GetService"Players".LocalPlayer:GetMouse())or game:GetService"Players".LocalPlayer:GetMouse()
-local g=cloneref and cloneref(game:GetService"Workspace".CurrentCamera)or game:GetService"Workspace".CurrentCamera
+
 
 local h=a.load'a'
 local i=h.New
@@ -4335,10 +4328,6 @@ local c=a.load'a'
 local e=c.New local g=
 c.Tween
 
-local h=cloneref and cloneref(game:GetService"UserInputService")or game:GetService"UserInputService"local i=
-cloneref and cloneref(game:GetService"TouchInputService")or game:GetService"TouchInputService"
-local j=cloneref and cloneref(game:GetService"RunService")or game:GetService"RunService"
-local k=cloneref and cloneref(game:GetService"Players")or game:GetService"Players"
 
 local l=j.RenderStepped
 local m=k.LocalPlayer
@@ -5039,8 +5028,6 @@ return l.__type,l
 end
 
 return i end function a.B()local c=
-cloneref and cloneref(game:GetService"UserInputService")or game:GetService"UserInputService"
-local e=cloneref and cloneref(game:GetService"Players")or game:GetService"Players".LocalPlayer:GetMouse()
 
 local h=a.load'a'
 local i=h.New
@@ -5759,7 +5746,8 @@ Dropdown="chevrons-up-down",
 Code="terminal",
 Colorpicker="palette",
 }end function a.E()local c=
-cloneref and cloneref(game:GetService"UserInputService")or game:GetService"UserInputService"
+
+
 
 local e={
 Margin=8,
@@ -6255,10 +6243,6 @@ return n
 end
 
 return e end function a.F()
-local c=cloneref and cloneref(game:GetService"UserInputService")or game:GetService"UserInputService"local e=
-cloneref and cloneref(game:GetService"RunService")or game:GetService"RunService"
-
-local h=cloneref and cloneref(workspace.CurrentCamera)or workspace.CurrentCamera
 
 local i=a.load'a'
 local j=i.New
@@ -6513,7 +6497,6 @@ end
 
 local y
 if r.User.Enabled then local
-z, A=(cloneref and cloneref(game:GetService"Players")or game:GetService"Players"):GetUserThumbnailAsync(
 r.User.Anonymous and 1 or game.Players.LocalPlayer.UserId,
 Enum.ThumbnailType.HeadShot,
 Enum.ThumbnailSize.Size420x420
@@ -7576,13 +7559,11 @@ h.Tween
 
 h.Themes=e
 
-local k=cloneref and cloneref(game:GetService"Players")or game:GetService"Players"
 local l=k and k.LocalPlayer or nil
 aa.Themes=e
 
 local m=protectgui or(syn and syn.protect_gui)or function()end
 
-local n=cloneref and cloneref(game:GetService"CoreGui")or game:GetService"CoreGui"
 local o=gethui and gethui()or n
 
 

@@ -10,7 +10,7 @@
     To view the source code, see the 'Src' folder on the official GitHub repository.
     
     Author: .ftgs#0 (Discord User)
-    Github: https://github.com/Footagesus/WindUI
+    Github: https://github.com/Footagesus/MyRandom
     Discord: https://discord.gg/84CNGY5wAV
 ]]
 
@@ -33,7 +33,7 @@ Font="",
 CanDraggable=true,
 Theme=nil,
 Themes=nil,
-WindUI=nil,
+MyRandom=nil,
 Signals={},
 Objects={},
 FontObjects={},
@@ -103,7 +103,7 @@ Grey="#484848",
 }
 
 function f.Init(g)
-f.WindUI=g
+f.MyRandom=g
 end
 
 
@@ -129,9 +129,9 @@ if not h then local
 j, k=i:find":%d+: "
 
 
-warn("[ WindUI: DEBUG Mode ] "..i)
+warn("[ MyRandom: DEBUG Mode ] "..i)
 
-return f.WindUI:Notify{
+return f.MyRandom:Notify{
 Title="DEBUG Mode: Error",
 Content=not k and i or i:sub(k+1),
 Duration=8,
@@ -378,7 +378,7 @@ p.ImageLabel.ImageRectOffset=f.Icon(i)[2].ImageRectPosition
 p.ImageLabel.ImageRectSize=f.Icon(i)[2].ImageRectSize
 end
 if string.find(i,"http")then
-local q="WindUI/"..l.."/Assets/."..m.."-"..j..".png"
+local q="MyRandom/"..l.."/Assets/."..m.."-"..j..".png"
 local r,s=pcall(function()
 task.spawn(function()
 if not isfile(q)then
@@ -393,7 +393,7 @@ p.ImageLabel.Image=getcustomasset(q)
 end)
 end)
 if not r then
-warn("[ WindUI.Creator ]  '"..identifyexecutor().."' doesnt support the URL Images. Error: "..s)
+warn("[ MyRandom.Creator ]  '"..identifyexecutor().."' doesnt support the URL Images. Error: "..s)
 
 p:Destroy()
 end
@@ -912,7 +912,7 @@ local g=a.load'c'.New
 local h=a.load'd'.New
 
 function c.new(i,j,k)
-local l=a.load'e'.Init(nil,i.WindUI.ScreenGui.KeySystem)
+local l=a.load'e'.Init(nil,i.MyRandom.ScreenGui.KeySystem)
 local m=l.Create(true)
 
 
@@ -936,7 +936,7 @@ q=d.Image(
 i.Icon,
 i.Title..":"..i.Icon,
 0,
-i.WindUI.Window,
+i.MyRandom.Window,
 "KeySystem",
 i.IconThemed
 )
@@ -1446,7 +1446,7 @@ Thumbnail=g.Thumbnail,
 Buttons=g.Buttons
 }
 
-local i=a.load'e'.Init(nil,g.WindUI.ScreenGui.Popups)
+local i=a.load'e'.Init(nil,g.MyRandom.ScreenGui.Popups)
 local j=i.Create(true)
 
 local k=200
@@ -1468,7 +1468,7 @@ m=d.Image(
 h.Icon,
 h.Title..":"..h.Icon,
 0,
-g.WindUI.Window,
+g.MyRandom.Window,
 "Popup",
 g.IconThemed
 )
@@ -1968,14 +1968,14 @@ end
 
 function d.Init(e,f)
 if not f.Folder then
-warn"[ WindUI.ConfigManager ] Window.Folder is not specified."
+warn"[ MyRandom.ConfigManager ] Window.Folder is not specified."
 
 return false
 end
 
 d.Window=f
 d.Folder=f.Folder
-d.Path="WindUI/"..tostring(d.Folder).."/config/"
+d.Path="MyRandom/"..tostring(d.Folder).."/config/"
 
 return d
 end
@@ -3544,7 +3544,7 @@ Position=UDim2.new(-10,0,-10,0),
 Visible=false,
 Active=false,
 
-Parent=n.WindUI.DropdownGui,
+Parent=n.MyRandom.DropdownGui,
 AnchorPoint=Vector2.new(1,0),
 },{
 o.UIElements.Menu,
@@ -4306,14 +4306,14 @@ local n,o=pcall(function()
 toclipboard(k.Code)
 end)
 if n then
-j.WindUI:Notify{
+j.MyRandom:Notify{
 Title="Success",
 Content="The "..m.." copied to your clipboard.",
 Icon="check",
 Duration=5,
 }
 else
-j.WindUI:Notify{
+j.MyRandom:Notify{
 Title="Error",
 Content="The "..m.." is not copied. Error: "..o,
 Icon="x",
@@ -4321,7 +4321,7 @@ Duration=5,
 }
 end
 end
-end,j.WindUI.UIScale)
+end,j.MyRandom.UIScale)
 
 function k.SetCode(n,o)
 m.Set(o)
@@ -5053,7 +5053,7 @@ local m=a.load'j'.New
 
 local n={
 Window=nil,
-WindUI=nil,
+MyRandom=nil,
 Tabs={},
 Containers={},
 SelectedTab=nil,
@@ -5066,7 +5066,7 @@ OnChangeFunc=function(n)end
 
 function n.Init(o,p,q,r)
 n.Window=o
-n.WindUI=p
+n.MyRandom=p
 n.ToolTipParent=q
 n.TabHighlight=r
 return n
@@ -5091,7 +5091,7 @@ UICorner=n.Window.UICorner-(n.Window.UIPadding/2),
 }
 
 local q=n.Window
-local r=n.WindUI
+local r=n.MyRandom
 
 n.TabCount=n.TabCount+1
 local s=n.TabCount
@@ -5457,7 +5457,7 @@ for B,C in pairs(A)do
 p[B]=function(D,E)
 E.Parent=D.UIElements.ContainerFrame
 E.Window=q
-E.WindUI=r local
+E.MyRandom=r local
 
 F, G=C:New(E)
 table.insert(D.Elements,G)
@@ -6325,7 +6325,7 @@ r.Resizable=true
 end
 
 if r.Folder then
-makefolder("WindUI/"..r.Folder)
+makefolder("MyRandom/"..r.Folder)
 end
 
 local s=j("UICorner",{
@@ -7017,7 +7017,7 @@ p=true
 end
 if not p then
 p=not p
-q.WindUI:Notify{
+q.MyRandom:Notify{
 Title="Minimize",
 Content=H,
 Icon="eye-off",
@@ -7039,7 +7039,7 @@ task.wait(.06)
 r.Closed=false
 
 k(r.UIElements.Main.Background,0.2,{
-ImageTransparency=r.Transparent and q.WindUI.TransparencyValue or 0,
+ImageTransparency=r.Transparent and q.MyRandom.TransparencyValue or 0,
 },Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
 
 k(r.UIElements.Main.Background,0.4,{
@@ -7131,9 +7131,9 @@ end
 function r.ToggleTransparency(H,I)
 
 r.Transparent=I
-q.WindUI.Transparent=I
+q.MyRandom.Transparent=I
 
-r.UIElements.Main.Background.ImageTransparency=I and q.WindUI.TransparencyValue or 0
+r.UIElements.Main.Background.ImageTransparency=I and q.MyRandom.TransparencyValue or 0
 
 r.UIElements.MainBar.Background.ImageTransparency=I and 0.97 or 0.95
 
@@ -7141,8 +7141,8 @@ end
 
 
 function r.SetUIScale(H,I)
-q.WindUI.UIScale=I
-k(q.WindUI.ScreenGui.UIScale,.2,{Scale=I},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
+q.MyRandom.UIScale=I
+k(q.MyRandom.ScreenGui.UIScale,.2,{Scale=I},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
 end
 
 do
@@ -7187,7 +7187,7 @@ end
 
 local H=a.load'B'
 local I=a.load'C'
-local J=H.Init(r,q.WindUI,q.RandomFolder3)
+local J=H.Init(r,q.MyRandom,q.RandomFolder3)
 J:OnChange(function(K)r.CurrentTab=K end)
 
 r.TabModule=H
@@ -7202,7 +7202,7 @@ J:SelectTab(L)
 end
 
 function r.Section(K,L)
-return I.New(L,r.UIElements.SideBar.Frame,r.Folder,q.WindUI.UIScale)
+return I.New(L,r.UIElements.SideBar.Frame,r.Folder,q.MyRandom.UIScale)
 end
 
 function r.IsResizable(K,L)
@@ -7652,7 +7652,7 @@ local r=q.Init(aa.NotificationGui)
 function aa.Notify(s,t)
 t.Holder=r.Frame
 t.Window=aa.Window
-t.WindUI=aa
+t.MyRandom=aa
 return q.New(t)
 end
 
@@ -7697,7 +7697,7 @@ end
 
 
 function aa.Popup(s,t)
-t.WindUI=aa
+t.MyRandom=aa
 return a.load'h'.new(t)
 end
 
@@ -7705,8 +7705,8 @@ end
 function aa.CreateWindow(s,t)
 local u=a.load'F'
 
-if not isfolder"WindUI"then
-makefolder"WindUI"
+if not isfolder"MyRandom"then
+makefolder"MyRandom"
 end
 if t.Folder then
 makefolder(t.Folder)
@@ -7714,7 +7714,7 @@ else
 makefolder(t.Title)
 end
 
-t.WindUI=aa
+t.MyRandom=aa
 t.Parent=p
 t.RandomFolder3=aa.RandomFolder3
 

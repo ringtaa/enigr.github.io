@@ -4463,7 +4463,7 @@ CornerRadius=UDim.new(0,8),
 })
 
 e("ImageLabel",{
-Image="http://www.roblox.com/asset/?id=14204231522",
+Image="",
 ImageTransparency=0.45,
 ScaleType=Enum.ScaleType.Tile,
 TileSize=UDim2.fromOffset(40,40),
@@ -4497,7 +4497,7 @@ CornerRadius=UDim.new(0,8),
 })
 
 e("ImageLabel",{
-Image="http://www.roblox.com/asset/?id=14204231522",
+Image="",
 ImageTransparency=0.45,
 ScaleType=Enum.ScaleType.Tile,
 TileSize=UDim2.fromOffset(40,40),
